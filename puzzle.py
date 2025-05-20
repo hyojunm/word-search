@@ -1,4 +1,9 @@
-### TODO: fix problem where words are sharing letters in the same/opposite direction
+# TODO: fix problem where words are sharing letters in the same/opposite direction
+# TODO: add letter frequency analysis for filling in empty spaces
+# TODO: implement encoding of puzzle, word list, and solution
+# TODO: instead of random placement, take the average of all letters added so far
+# TODO: always sharing letters makes the puzzle too easy?
+# TODO: prevent additional words from accidentally appearing in the puzzle
 
 
 import random
@@ -36,6 +41,15 @@ def is_valid_list(words):
         word_set.append(w)
 
     return True
+
+
+def edit_list(words):
+    words_mod = []
+
+    for w in words:
+        words_mod.append(w.upper())
+
+    return words_mod
 
 
 def analyze_list(words):
@@ -145,6 +159,7 @@ def print_puzzle(grid):
 
 
 def create_puzzle(words):
+    words = edit_list(words)
     num_words, num_letters, max_word_len = analyze_list(words)
 
     grid = []
@@ -183,12 +198,20 @@ def create_puzzle(words):
 
         words.remove(word)
 
-    return trim_puzzle(grid)
+    grid_mod = trim_puzzle(grid)
+
+    for i in range(len(grid_mod)):
+        for j in range(len(grid_mod[0])):
+            if grid_mod[i][j] is None:
+                grid_mod[i][j] = chr(ord('A') + random.randint(0, 25))
+
+    return grid_mod
 
 
 if __name__ == '__main__':
+    '''
     words = ['dog', 'cat', 'oreo', 'tree']
     print_puzzle(create_puzzle(words))
-
-    words = ['apple', 'banana', 'orange', 'pineapple', 'kiwi', 'watermelon']
+    '''
+    words = ['apple', 'banana', 'orange', 'cherry', 'kiwi', 'watermelon']
     print_puzzle(create_puzzle(words))
