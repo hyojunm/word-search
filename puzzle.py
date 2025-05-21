@@ -209,9 +209,5 @@ def create_puzzle(words):
 
 
 if __name__ == '__main__':
-    '''
-    words = ['dog', 'cat', 'oreo', 'tree']
-    print_puzzle(create_puzzle(words))
-    '''
     words = ['apple', 'banana', 'orange', 'cherry', 'kiwi', 'watermelon']
     print_puzzle(create_puzzle(words))

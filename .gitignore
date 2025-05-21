@@ -1,2 +1,3 @@
-.git
-.env
+.git/
+.env/
+__pycache__/
