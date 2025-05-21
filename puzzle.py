@@ -152,8 +152,8 @@ def trim_puzzle(grid):
 
 def print_puzzle(grid):
     for row in grid:
-        for cell in row:
-            print('*' if cell is None else cell, end='')
+        for letter in row:
+            print('*' if letter is None else letter, end='')
 
         print()
 

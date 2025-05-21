@@ -25,6 +25,10 @@ h1 {
   font-size: var(--font-xl);
 }
 
+.puzzle {
+  font-family: monospace;
+}
+
 .create {
   display: flex;
   flex-direction: column;

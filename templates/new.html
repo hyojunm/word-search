@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% set title = 'Puzzle Created!' %}
+
+{% block content %}
+<div class="puzzle">
+  {% for row in puzzle %}
+    <p>
+      {% for letter in row %}
+        {{letter}}
+      {% endfor %}
+    </p>
+  {% endfor %}
+</div>
+<div>
+  <input type="text" value="Untitled puzzle">
+  <input type="text" value="{{link}}" disabled>
+  <input type="button" value="Share">
+  <input type="button" value="Publish">
+  <input type="button" value="Print">
+  <input type="button" value="Play">
+  <input type="button" value="Delete">
+</div>
+{% endblock %}

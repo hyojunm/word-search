@@ -5,7 +5,7 @@
 {% block content %}
 <div>
   <h1>Hello, world!</h1>
-  <form action="" method="POST" class="create">
+  <form action="{{url_for('new')}}" method="POST" class="create">
     <div class="create-input">
       <div class="create-input-options">
         <input type="hidden" value="0" name="word-list-type" id="word-list-type">
@@ -16,7 +16,7 @@
       <textarea placeholder="Enter your list of words" name="word-list" id="word-list"></textarea>
     </div>
     <input type="submit" value="Create Puzzle" class="button">
-    <a href="{{url_for('gallery_page')}}" class="button">View Gallery</a>
+    <a href="{{url_for('gallery')}}" class="button">View Gallery</a>
   </form>
 </div>
 
