@@ -3,9 +3,16 @@
 <head>
   <title>{{title}} - Word Search Generator</title>
 
-  <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+  <link rel="stylesheet" href="{{url_for('static', filename='button.css')}}" />
+  <link rel="stylesheet" href="{{url_for('static', filename='message.css')}}" />
 </head>
 <body>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"
+          integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+          crossorigin="anonymous"></script>
+  <script src="{{url_for('static', filename='main.js')}}"></script>
+
   {% block content %}{% endblock %}
 </body>
 </html>

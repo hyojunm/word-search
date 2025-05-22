@@ -1,0 +1,25 @@
+.message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px 32px;
+}
+
+.error-message {
+  background-color: var(--red);
+}
+
+.message > span {
+  font-size: var(--font-md);
+  font-family: var(--body-font);
+}
+
+.message > button {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}

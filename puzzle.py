@@ -27,20 +27,21 @@ SOUTH     = 6
 SOUTHEAST = 7
 
 
-def is_valid_list(words):
+def validate_list(words):
+    if not len(words):
+        return 'The list cannot be empty.'
+
     word_set = []
 
     for w in words:
         if w in word_set:
-            return False
+            return 'There cannot be duplicate words in the list.'
 
-        for c in w.upper():
-            if ord(c) < ord('A') or ord(c) > ord('Z'):
-                return False
+        for c in w.lower():
+            if ord(c) < ord('a') or ord(c) > ord('z'):
+                return 'There cannot be words with special characters in the list.'
 
         word_set.append(w)
-
-    return True
 
 
 def edit_list(words):

@@ -1,0 +1,38 @@
+.button, a.button, button, input[type="button"], input[type="submit"] {
+  padding: 16px 32px;
+  outline: none; /* maybe not */
+  font-family: var(--button-font);
+  font-size: var(--font-md);
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.border-button {
+  border: 5px solid var(--black);
+}
+
+.green-button {
+  background-color: var(--green);
+}
+
+.green-button:hover {
+  background-color: var(--green-hover);
+}
+
+.light-green-button {
+  background-color: var(--light-green);
+}
+
+.light-green-button:hover {
+  background-color: var(--light-green-hover);
+}
+
+.light-gray-button {
+  background-color: var(--light-gray);
+}
+
+.light-gray-button:hover {
+  background-color: var(--light-gray-hover);
+}
